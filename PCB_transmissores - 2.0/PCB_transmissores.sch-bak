@@ -1,0 +1,277 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "PCB Transmissores"
+Date "2020-05-20"
+Rev "2.0"
+Comp "Open Source"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 5990 3390 0    50   Input ~ 0
+M1
+Text GLabel 5990 3290 0    50   Input ~ 0
+M0
+Wire Wire Line
+	6490 4190 6490 4470
+Wire Wire Line
+	6490 4470 6590 4470
+Wire Wire Line
+	6590 4470 6590 4190
+$Comp
+L power:GND #PWR0105
+U 1 1 5EC6604A
+P 6590 4470
+F 0 "#PWR0105" H 6590 4220 50  0001 C CNN
+F 1 "GND" V 6595 4342 50  0000 R CNN
+F 2 "" H 6590 4470 50  0001 C CNN
+F 3 "" H 6590 4470 50  0001 C CNN
+	1    6590 4470
+	-1   0    0    -1  
+$EndComp
+Connection ~ 6590 4470
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5EC6A9C1
+P 7440 4130
+F 0 "#FLG0101" H 7440 4205 50  0001 C CNN
+F 1 "PWR_FLAG" H 7440 4303 50  0000 C CNN
+F 2 "" H 7440 4130 50  0001 C CNN
+F 3 "~" H 7440 4130 50  0001 C CNN
+	1    7440 4130
+	1    0    0    -1  
+$EndComp
+Text GLabel 7440 4130 3    50   Input ~ 0
+VIN
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5EC6B4A8
+P 8000 4130
+F 0 "#FLG0102" H 8000 4205 50  0001 C CNN
+F 1 "PWR_FLAG" H 8000 4303 50  0000 C CNN
+F 2 "" H 8000 4130 50  0001 C CNN
+F 3 "~" H 8000 4130 50  0001 C CNN
+	1    8000 4130
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5EC6B797
+P 8000 4130
+F 0 "#PWR0108" H 8000 3880 50  0001 C CNN
+F 1 "GND" V 8005 4002 50  0000 R CNN
+F 2 "" H 8000 4130 50  0001 C CNN
+F 3 "" H 8000 4130 50  0001 C CNN
+	1    8000 4130
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1500 3550 3    50   Input ~ 0
+TX_GPS
+Text GLabel 1700 3550 3    50   Input ~ 0
+VIN
+Text GLabel 1600 3550 3    50   Input ~ 0
+RX_GPS
+$Comp
+L power:GND #PWR0103
+U 1 1 5EC86FED
+P 1400 3550
+F 0 "#PWR0103" H 1400 3300 50  0001 C CNN
+F 1 "GND" V 1405 3422 50  0000 R CNN
+F 2 "" H 1400 3550 50  0001 C CNN
+F 3 "" H 1400 3550 50  0001 C CNN
+	1    1400 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5EC87D36
+P 7310 2360
+F 0 "J1" H 7390 2352 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 7390 2261 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 7310 2360 50  0001 C CNN
+F 3 "~" H 7310 2360 50  0001 C CNN
+	1    7310 2360
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7310 2560 3    50   Input ~ 0
+VIN
+$Comp
+L power:GND #PWR01
+U 1 1 5EC8BC4B
+P 7410 2560
+F 0 "#PWR01" H 7410 2310 50  0001 C CNN
+F 1 "GND" V 7415 2432 50  0000 R CNN
+F 2 "" H 7410 2560 50  0001 C CNN
+F 3 "" H 7410 2560 50  0001 C CNN
+	1    7410 2560
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 6990 3190
+NoConn ~ 6990 3290
+NoConn ~ 6990 3390
+NoConn ~ 6990 3490
+NoConn ~ 6990 3590
+NoConn ~ 6990 3690
+NoConn ~ 6990 3790
+NoConn ~ 6990 3890
+NoConn ~ 6990 2990
+Text GLabel 5030 3190 0    50   Input ~ 0
+RX_LORA
+NoConn ~ 5990 3090
+NoConn ~ 5990 2690
+NoConn ~ 5990 2590
+Text GLabel 6390 2190 1    50   Input ~ 0
+VIN
+Text GLabel 5990 3490 0    50   Input ~ 0
+TX_LORA
+Text GLabel 5990 2890 0    50   Input ~ 0
+RX_GPS
+Text GLabel 5990 2790 0    50   Input ~ 0
+TX_GPS
+NoConn ~ 8660 3840
+$Comp
+L MCU_BOARDS:Arduino_Nano_v3.x A1
+U 1 1 5EC53BFB
+P 6490 3190
+F 0 "A1" H 6490 2101 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 6490 2010 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 6490 3190 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 6490 3190 50  0001 C CNN
+	1    6490 3190
+	1    0    0    -1  
+$EndComp
+Text GLabel 6690 2110 1    50   Input ~ 0
+5V_NANO
+Wire Wire Line
+	6690 2110 6690 2190
+NoConn ~ 6990 2590
+NoConn ~ 6990 2690
+NoConn ~ 5990 2990
+NoConn ~ 5990 3890
+NoConn ~ 6590 2190
+$Comp
+L Device:R R4
+U 1 1 5EC913EB
+P 5300 3330
+F 0 "R4" H 5370 3376 50  0001 L CNN
+F 1 "0,5k" V 5326 3246 50  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 3330 50  0001 C CNN
+F 3 "~" H 5300 3330 50  0001 C CNN
+	1    5300 3330
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5EC85293
+P 5450 3330
+F 0 "#PWR0101" H 5450 3080 50  0001 C CNN
+F 1 "GND" V 5455 3202 50  0000 R CNN
+F 2 "" H 5450 3330 50  0001 C CNN
+F 3 "" H 5450 3330 50  0001 C CNN
+	1    5450 3330
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5EC913E1
+P 5300 3190
+F 0 "R3" H 5370 3236 50  0001 L CNN
+F 1 "1k" V 5323 3145 50  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 3190 50  0001 C CNN
+F 3 "~" H 5300 3190 50  0001 C CNN
+	1    5300 3190
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 3190 5990 3190
+Wire Wire Line
+	5150 3190 5150 3330
+Connection ~ 5150 3190
+Wire Wire Line
+	5030 3190 5150 3190
+Text GLabel 2700 3650 3    50   Input ~ 0
+TX_LORA
+Text GLabel 2400 3650 3    50   Input ~ 0
+M0
+Text GLabel 2500 3650 3    50   Input ~ 0
+M1
+Text GLabel 2600 3650 3    50   Input ~ 0
+RX_LORA
+$Comp
+L power:GND #PWR02
+U 1 1 5ECA84D5
+P 3000 3650
+F 0 "#PWR02" H 3000 3400 50  0001 C CNN
+F 1 "GND" H 3005 3477 50  0000 C CNN
+F 2 "" H 3000 3650 50  0001 C CNN
+F 3 "" H 3000 3650 50  0001 C CNN
+	1    3000 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4050 2850 1    50   Input ~ 0
+VIN
+$Comp
+L power:GND #PWR03
+U 1 1 5ECAC6BC
+P 3700 2850
+F 0 "#PWR03" H 3700 2600 50  0001 C CNN
+F 1 "GND" H 3705 2677 50  0000 C CNN
+F 2 "" H 3700 2850 50  0001 C CNN
+F 3 "" H 3700 2850 50  0001 C CNN
+	1    3700 2850
+	-1   0    0    1   
+$EndComp
+Text GLabel 4050 3700 3    50   Input ~ 0
+3.3V_DCDC
+Text GLabel 2900 3650 3    50   Input ~ 0
+3.3V_DCDC
+$Comp
+L power:GND #PWR04
+U 1 1 5ECACF19
+P 3650 3700
+F 0 "#PWR04" H 3650 3450 50  0001 C CNN
+F 1 "GND" H 3655 3527 50  0000 C CNN
+F 2 "" H 3650 3700 50  0001 C CNN
+F 3 "" H 3650 3700 50  0001 C CNN
+	1    3650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF_WiFi:LORA_433T30D LORA_1W1
+U 1 1 5ECB6750
+P 2700 3350
+F 0 "LORA_1W1" H 2600 3950 50  0000 L CNN
+F 1 "LORA_433T30D" H 2500 3850 50  0000 L CNN
+F 2 "RF_WiFi:LORA_E32_433T30D" H 2200 3750 50  0000 L CNN
+F 3 "" H 2686 3386 50  0001 C CNN
+	1    2700 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Converter_DCDC:DCDC_CHINA DCDC_3V1
+U 1 1 5ECACC61
+P 3850 3300
+F 0 "DCDC_3V1" H 4178 3416 50  0000 L CNN
+F 1 "DCDC_CHINA" H 4178 3325 50  0000 L CNN
+F 2 "Converter_DCDC:STEPDOWN_CHINA" H 4200 3150 50  0000 L CNN
+F 3 "" H 3850 3300 50  0001 C CNN
+	1    3850 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF_GPS:NEO_6M 6M1
+U 1 1 5ECB042A
+P 1500 3300
+F 0 "6M1" H 1878 3408 50  0000 L CNN
+F 1 "NEO_6M" H 1878 3317 50  0000 L CNN
+F 2 "RF_GPS:Neo-6M" H 1878 3226 50  0000 L CNN
+F 3 "" H 1500 3300 50  0001 C CNN
+	1    1500 3300
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
