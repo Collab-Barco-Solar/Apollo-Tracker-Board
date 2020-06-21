@@ -1,4 +1,4 @@
-18633212648745559
+18633215322054194
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -56154,6 +56154,13 @@ PocketBeagle
 72
 72
 Module
+Ethernet_Shield_W5100
+
+Ethernet Shield W100
+0
+28
+28
+Module
 Maple_Mini
 Maple Mini, http://docs.leaflabs.com/static.leaflabs.com/pub/leaflabs/maple-docs/0.0.12/hardware/maple-mini.html
 Maple Mini
@@ -72737,13 +72744,6 @@ Through hole socket strip THT 1x04 2.54mm single row
 4
 4
 RF_GPS
-Neo6M_GPS
-
-
-0
-1
-1
-RF_GPS
 SIM28ML
 https://simcom.ee/documents/SIM28ML/SIM28ML_Hardware%20Design_V1.01.pdf
 SIM28ML GPS
@@ -73547,7 +73547,7 @@ Through hole straight socket strip, 1x07, 2.54mm pitch, single row (from Kicad 4
 Through hole socket strip THT 1x07 2.54mm single row
 0
 11
-7
+11
 RF_WiFi
 USR-C322
 https://www.usriot.com/download/WIFI/USR-C322-Hardware-Manual_V1.2.01.pdf
