@@ -1,4 +1,4 @@
-18634803218529996
+18633215322054194
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -72743,13 +72743,6 @@ Through hole socket strip THT 1x04 2.54mm single row
 0
 4
 4
-RF_GPS
-Neo6M_GPS
-
-
-0
-1
-1
 RF_GPS
 SIM28ML
 https://simcom.ee/documents/SIM28ML/SIM28ML_Hardware%20Design_V1.01.pdf
