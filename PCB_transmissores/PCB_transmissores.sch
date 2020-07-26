@@ -72,8 +72,6 @@ F 3 "" H 8000 4130 50  0001 C CNN
 $EndComp
 Text GLabel 1500 3550 3    50   Input ~ 0
 TX_GPS
-Text GLabel 1700 3550 3    50   Input ~ 0
-5V_NANO
 Text GLabel 1600 3550 3    50   Input ~ 0
 RX_GPS
 $Comp
@@ -113,27 +111,17 @@ F 3 "" H 7410 2560 50  0001 C CNN
 $EndComp
 NoConn ~ 6990 3190
 NoConn ~ 6990 3290
-NoConn ~ 6990 3390
 NoConn ~ 6990 3490
 NoConn ~ 6990 3590
 NoConn ~ 6990 3690
 NoConn ~ 6990 3790
 NoConn ~ 6990 3890
 NoConn ~ 6990 2990
-Text GLabel 5030 3190 0    50   Input ~ 0
-RX_LORA
 NoConn ~ 5990 3090
 NoConn ~ 5990 2690
 NoConn ~ 5990 2590
-Text GLabel 6390 2190 1    50   Input ~ 0
-VIN
-Text GLabel 5990 3490 0    50   Input ~ 0
-TX_LORA
-Text GLabel 5990 2790 0    50   Input ~ 0
-TX_GPS
-NoConn ~ 8660 3840
 $Comp
-L MCU_BOARDS:Arduino_Nano_v3.x A1
+L PCB_transmissores-rescue:Arduino_Nano_v3.x-MCU_BOARDS A1
 U 1 1 5EC53BFB
 P 6490 3190
 F 0 "A1" H 6490 2101 50  0000 C CNN
@@ -143,55 +131,10 @@ F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 6490 3190 50
 	1    6490 3190
 	1    0    0    -1  
 $EndComp
-Text GLabel 6690 2110 1    50   Input ~ 0
-5V_NANO
-Wire Wire Line
-	6690 2110 6690 2190
 NoConn ~ 6990 2590
 NoConn ~ 6990 2690
 NoConn ~ 5990 2990
-NoConn ~ 5990 3890
 NoConn ~ 6590 2190
-$Comp
-L Device:R R4
-U 1 1 5EC913EB
-P 5300 3330
-F 0 "R4" H 5370 3376 50  0001 L CNN
-F 1 "0,5k" V 5326 3246 50  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 3330 50  0001 C CNN
-F 3 "~" H 5300 3330 50  0001 C CNN
-	1    5300 3330
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0101
-U 1 1 5EC85293
-P 5450 3330
-F 0 "#PWR0101" H 5450 3080 50  0001 C CNN
-F 1 "GND" V 5455 3202 50  0000 R CNN
-F 2 "" H 5450 3330 50  0001 C CNN
-F 3 "" H 5450 3330 50  0001 C CNN
-	1    5450 3330
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 5EC913E1
-P 5300 3190
-F 0 "R3" H 5370 3236 50  0001 L CNN
-F 1 "1k" V 5323 3145 50  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 3190 50  0001 C CNN
-F 3 "~" H 5300 3190 50  0001 C CNN
-	1    5300 3190
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5450 3190 5990 3190
-Wire Wire Line
-	5150 3190 5150 3330
-Connection ~ 5150 3190
-Wire Wire Line
-	5030 3190 5150 3190
 Text GLabel 2700 3650 3    50   Input ~ 0
 TX_LORA
 Text GLabel 2400 3650 3    50   Input ~ 0
@@ -214,21 +157,6 @@ $EndComp
 Text GLabel 4050 2850 1    50   Input ~ 0
 VIN
 $Comp
-L power:GND #PWR03
-U 1 1 5ECAC6BC
-P 3700 2850
-F 0 "#PWR03" H 3700 2600 50  0001 C CNN
-F 1 "GND" H 3705 2677 50  0000 C CNN
-F 2 "" H 3700 2850 50  0001 C CNN
-F 3 "" H 3700 2850 50  0001 C CNN
-	1    3700 2850
-	-1   0    0    1   
-$EndComp
-Text GLabel 4050 3700 3    50   Input ~ 0
-3.3V_DCDC
-Text GLabel 2900 3650 3    50   Input ~ 0
-3.3V_DCDC
-$Comp
 L power:GND #PWR04
 U 1 1 5ECACF19
 P 3650 3700
@@ -243,64 +171,24 @@ $Comp
 L RF_WiFi:LORA_433T30D LORA_1W1
 U 1 1 5ECB6750
 P 2700 3350
-F 0 "LORA_1W1" H 2600 3950 50  0000 L CNN
-F 1 "LORA_433T30D" H 2500 3850 50  0000 L CNN
+F 0 "LORA_1W1" H 2505 3950 50  0000 L CNN
+F 1 "LORA_433T30D" H 2420 3845 50  0000 L CNN
 F 2 "RF_WiFi:LORA_E32_433T30D" H 2200 3750 50  0000 L CNN
 F 3 "" H 2686 3386 50  0001 C CNN
 	1    2700 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L Converter_DCDC:DCDC_CHINA DCDC_3V1
-U 1 1 5ECACC61
-P 3850 3300
-F 0 "DCDC_3V1" H 4178 3416 50  0000 L CNN
-F 1 "DCDC_CHINA" H 4178 3325 50  0000 L CNN
-F 2 "Converter_DCDC:STEPDOWN_CHINA" H 3210 4120 50  0000 L CNN
-F 3 "" H 3850 3300 50  0001 C CNN
-	1    3850 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L RF_GPS:NEO_6M 6M1
 U 1 1 5ECB042A
 P 1500 3300
-F 0 "6M1" H 1878 3408 50  0000 L CNN
-F 1 "NEO_6M" H 1878 3317 50  0000 L CNN
+F 0 "6M1" H 1420 3820 50  0000 L CNN
+F 1 "NEO_6M" H 1355 3930 50  0000 L CNN
 F 2 "RF_GPS:Neo-6M" H 1220 3700 50  0000 L CNN
 F 3 "" H 1500 3300 50  0001 C CNN
 	1    1500 3300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5030 2890 5150 2890
-Connection ~ 5150 2890
-Wire Wire Line
-	5150 2890 5150 3030
-$Comp
-L Device:R R1
-U 1 1 5EEE284B
-P 5300 2890
-F 0 "R1" H 5370 2936 50  0001 L CNN
-F 1 "1k" V 5323 2845 50  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 2890 50  0001 C CNN
-F 3 "~" H 5300 2890 50  0001 C CNN
-	1    5300 2890
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5EEE2837
-P 5300 3030
-F 0 "R2" H 5370 3076 50  0001 L CNN
-F 1 "0,5k" V 5326 2946 50  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 3030 50  0001 C CNN
-F 3 "~" H 5300 3030 50  0001 C CNN
-	1    5300 3030
-	0    1    1    0   
-$EndComp
-Text GLabel 5030 2890 0    50   Input ~ 0
-RX_GPS
 $Comp
 L Device:Battery_Cell BT1
 U 1 1 5EEE89DD
@@ -325,8 +213,173 @@ F 3 "" H 8000 2550 50  0001 C CNN
 $EndComp
 Text GLabel 8000 2250 1    50   Input ~ 0
 VIN
+$Comp
+L Device:R R6
+U 1 1 5EFC9734
+P 7640 3310
+F 0 "R6" H 7710 3356 50  0001 L CNN
+F 1 "5000k" V 7580 3190 50  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7570 3310 50  0001 C CNN
+F 3 "~" H 7640 3310 50  0001 C CNN
+	1    7640 3310
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5EFC973E
+P 7640 3450
+F 0 "R5" H 7710 3496 50  0001 L CNN
+F 1 "500k" V 7750 3360 50  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7570 3450 50  0001 C CNN
+F 3 "~" H 7640 3450 50  0001 C CNN
+	1    7640 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5EFC974A
+P 7790 3450
+F 0 "#PWR06" H 7790 3200 50  0001 C CNN
+F 1 "GND" H 7795 3277 50  0000 C CNN
+F 2 "" H 7790 3450 50  0001 C CNN
+F 3 "" H 7790 3450 50  0001 C CNN
+	1    7790 3450
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7790 3310 2    50   Input ~ 0
+VIN
+NoConn ~ 2800 3650
+NoConn ~ 5990 3890
+NoConn ~ 5990 3790
+NoConn ~ 5990 3690
+NoConn ~ 5990 3590
+$Comp
+L Device:R R9
+U 1 1 5EFD5849
+P 5260 4300
+F 0 "R9" H 5330 4346 50  0001 L CNN
+F 1 "4k7" V 5260 4230 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5190 4300 50  0001 C CNN
+F 3 "~" H 5260 4300 50  0001 C CNN
+	1    5260 4300
+	1    0    0    -1  
+$EndComp
+Text GLabel 5990 3490 0    50   Input ~ 0
+D9
+Text GLabel 5990 3190 0    50   Input ~ 0
+D6
+Text GLabel 5990 2890 0    50   Input ~ 0
+D3
 Wire Wire Line
-	5450 2890 5990 2890
+	7490 3310 7490 3380
+Text GLabel 6990 3390 2    50   Input ~ 0
+A2
+Text GLabel 7470 3380 0    50   Input ~ 0
+A2
+Wire Wire Line
+	7470 3380 7490 3380
+Connection ~ 7490 3380
+Wire Wire Line
+	7490 3380 7490 3450
+Text GLabel 5990 2790 0    50   Input ~ 0
+D2
+$Comp
+L power:GND #PWR0104
+U 1 1 5EFDB6A0
+P 5430 4450
+F 0 "#PWR0104" H 5430 4200 50  0001 C CNN
+F 1 "GND" H 5435 4277 50  0000 C CNN
+F 2 "" H 5430 4450 50  0001 C CNN
+F 3 "" H 5430 4450 50  0001 C CNN
+	1    5430 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5EFDBD46
+P 5260 4450
+F 0 "#PWR0106" H 5260 4200 50  0001 C CNN
+F 1 "GND" H 5265 4277 50  0000 C CNN
+F 2 "" H 5260 4450 50  0001 C CNN
+F 3 "" H 5260 4450 50  0001 C CNN
+	1    5260 4450
+	1    0    0    -1  
+$EndComp
+Text GLabel 4890 4150 1    50   Input ~ 0
+RX_LORA
+Text GLabel 5260 4150 1    50   Input ~ 0
+TX_GPS
+Text Notes 5480 4770 2    50   ~ 0
+Pull Up Resistor
+Text Notes 7300 3680 0    50   ~ 0
+Medir Tensão Bateria
+$Comp
+L Device:R R10
+U 1 1 5EFD5853
+P 5430 4300
+F 0 "R10" H 5500 4346 50  0001 L CNN
+F 1 "4k7" V 5430 4230 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5360 4300 50  0001 C CNN
+F 3 "~" H 5430 4300 50  0001 C CNN
+	1    5430 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5EFD4CF6
+P 4890 4300
+F 0 "R7" H 4820 4254 50  0001 R CNN
+F 1 "4k7" V 4880 4370 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4820 4300 50  0001 C CNN
+F 3 "~" H 4890 4300 50  0001 C CNN
+	1    4890 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5EFDC4EC
+P 4890 4450
+F 0 "#PWR0109" H 4890 4200 50  0001 C CNN
+F 1 "GND" H 4895 4277 50  0000 C CNN
+F 2 "" H 4890 4450 50  0001 C CNN
+F 3 "" H 4890 4450 50  0001 C CNN
+	1    4890 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5EFDC139
+P 5080 4450
+F 0 "#PWR0107" H 5080 4200 50  0001 C CNN
+F 1 "GND" H 5085 4277 50  0000 C CNN
+F 2 "" H 5080 4450 50  0001 C CNN
+F 3 "" H 5080 4450 50  0001 C CNN
+	1    5080 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5EFD545B
+P 5080 4300
+F 0 "R8" H 5150 4346 50  0001 L CNN
+F 1 "4k7" V 5080 4230 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5010 4300 50  0001 C CNN
+F 3 "~" H 5080 4300 50  0001 C CNN
+	1    5080 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5020 3490 5040 3490
+Wire Wire Line
+	5020 2720 5050 2720
+Text GLabel 5050 2720 2    50   Input ~ 0
+D2
+Text GLabel 5450 2890 2    50   Input ~ 0
+D3
+Text GLabel 5450 3190 2    50   Input ~ 0
+D6
+Text GLabel 5040 3490 2    50   Input ~ 0
+D9
 $Comp
 L power:GND #PWR0102
 U 1 1 5EF0CBB2
@@ -338,4 +391,138 @@ F 3 "" H 5450 3030 50  0001 C CNN
 	1    5450 3030
 	0    -1   -1   0   
 $EndComp
+Text GLabel 5030 2890 0    50   Input ~ 0
+RX_GPS
+$Comp
+L Device:R R2
+U 1 1 5EEE2837
+P 5300 3030
+F 0 "R2" H 5370 3076 50  0001 L CNN
+F 1 "0,5k" V 5326 2946 50  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 3030 50  0001 C CNN
+F 3 "~" H 5300 3030 50  0001 C CNN
+	1    5300 3030
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5EEE284B
+P 5300 2890
+F 0 "R1" H 5370 2936 50  0001 L CNN
+F 1 "1k" V 5323 2845 50  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 2890 50  0001 C CNN
+F 3 "~" H 5300 2890 50  0001 C CNN
+	1    5300 2890
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 2890 5150 3030
+Connection ~ 5150 2890
+Wire Wire Line
+	5030 2890 5150 2890
+Wire Wire Line
+	5030 3190 5150 3190
+Connection ~ 5150 3190
+Wire Wire Line
+	5150 3190 5150 3330
+$Comp
+L Device:R R3
+U 1 1 5EC913E1
+P 5300 3190
+F 0 "R3" H 5370 3236 50  0001 L CNN
+F 1 "1k" V 5323 3145 50  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 3190 50  0001 C CNN
+F 3 "~" H 5300 3190 50  0001 C CNN
+	1    5300 3190
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5EC85293
+P 5450 3330
+F 0 "#PWR0101" H 5450 3080 50  0001 C CNN
+F 1 "GND" V 5455 3202 50  0000 R CNN
+F 2 "" H 5450 3330 50  0001 C CNN
+F 3 "" H 5450 3330 50  0001 C CNN
+	1    5450 3330
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5EC913EB
+P 5300 3330
+F 0 "R4" H 5370 3376 50  0001 L CNN
+F 1 "0,5k" V 5326 3246 50  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 3330 50  0001 C CNN
+F 3 "~" H 5300 3330 50  0001 C CNN
+	1    5300 3330
+	0    1    1    0   
+$EndComp
+Text GLabel 5020 2720 0    50   Input ~ 0
+TX_GPS
+Text GLabel 5020 3490 0    50   Input ~ 0
+TX_LORA
+Text GLabel 5030 3190 0    50   Input ~ 0
+RX_LORA
+Text GLabel 5080 4150 1    50   Input ~ 0
+TX_LORA
+Text GLabel 5430 4150 1    50   Input ~ 0
+RX_GPS
+$Comp
+L Converter_DCDC:STEPUP XL6009E11
+U 1 1 5F1DCBFD
+P 3850 3300
+F 0 "XL6009E11" H 3635 4165 50  0000 L CNN
+F 1 "STEPUP" H 3705 4265 50  0000 L CNN
+F 2 "Converter_DCDC:STEPUP_XL6009E1" H 3500 4065 50  0000 L CNN
+F 3 "" H 3850 3300 50  0001 C CNN
+	1    3850 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5ECAC6BC
+P 3700 2850
+F 0 "#PWR03" H 3700 2600 50  0001 C CNN
+F 1 "GND" H 3705 2677 50  0000 C CNN
+F 2 "" H 3700 2850 50  0001 C CNN
+F 3 "" H 3700 2850 50  0001 C CNN
+	1    3700 2850
+	-1   0    0    1   
+$EndComp
+Text GLabel 2900 3650 3    50   Input ~ 0
+VIN
+Text GLabel 1700 3550 3    50   Input ~ 0
+VIN
+Text GLabel 4050 3700 3    50   Input ~ 0
+7V_STEPUP
+Text GLabel 6390 2190 1    50   Input ~ 0
+7V_STEPUP
+NoConn ~ 6690 2190
+$Comp
+L Connector:TestPoint JP1
+U 1 1 5F1F32C6
+P 8500 4135
+F 0 "JP1" H 8558 4253 50  0000 L CNN
+F 1 "Jumper" H 8558 4162 50  0000 L CNN
+F 2 "TestPoint:Furo_Jumper" H 8700 4135 50  0001 C CNN
+F 3 "~" H 8700 4135 50  0001 C CNN
+	1    8500 4135
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint JP2
+U 1 1 5F1F390C
+P 8975 4130
+F 0 "JP2" H 9033 4248 50  0000 L CNN
+F 1 "Jumper" H 9033 4157 50  0000 L CNN
+F 2 "TestPoint:Furo_Jumper" H 9175 4130 50  0001 C CNN
+F 3 "~" H 9175 4130 50  0001 C CNN
+	1    8975 4130
+	1    0    0    -1  
+$EndComp
+Text GLabel 8500 4135 3    50   Input ~ 0
+VIN
+Text GLabel 8975 4130 3    50   Input ~ 0
+VIN
 $EndSCHEMATC
