@@ -1,4 +1,4 @@
-18636412306715401
+18638086732116114
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -73548,6 +73548,13 @@ Shielding Cabinet
 0
 48
 1
+RF_WiFi
+LORA_E32_433T20D
+Through hole straight socket strip, 1x07, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x07 2.54mm single row
+0
+10
+10
 RF_WiFi
 LORA_E32_433T30D
 Through hole straight socket strip, 1x07, 2.54mm pitch, single row (from Kicad 4.0.7), script generated

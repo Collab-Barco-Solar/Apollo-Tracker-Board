@@ -85,30 +85,6 @@ F 3 "" H 1400 3550 50  0001 C CNN
 	1    1400 3550
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J1
-U 1 1 5EC87D36
-P 7310 2360
-F 0 "J1" H 7390 2352 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 7390 2261 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 7310 2360 50  0001 C CNN
-F 3 "~" H 7310 2360 50  0001 C CNN
-	1    7310 2360
-	0    -1   -1   0   
-$EndComp
-Text GLabel 7310 2560 3    50   Input ~ 0
-VIN
-$Comp
-L power:GND #PWR01
-U 1 1 5EC8BC4B
-P 7410 2560
-F 0 "#PWR01" H 7410 2310 50  0001 C CNN
-F 1 "GND" V 7415 2432 50  0000 R CNN
-F 2 "" H 7410 2560 50  0001 C CNN
-F 3 "" H 7410 2560 50  0001 C CNN
-	1    7410 2560
-	-1   0    0    -1  
-$EndComp
 NoConn ~ 6990 3190
 NoConn ~ 6990 3290
 NoConn ~ 6990 3490
@@ -154,30 +130,6 @@ F 3 "" H 3000 3650 50  0001 C CNN
 	1    3000 3650
 	1    0    0    -1  
 $EndComp
-Text GLabel 4050 2850 1    50   Input ~ 0
-VIN
-$Comp
-L power:GND #PWR04
-U 1 1 5ECACF19
-P 3650 3700
-F 0 "#PWR04" H 3650 3450 50  0001 C CNN
-F 1 "GND" H 3655 3527 50  0000 C CNN
-F 2 "" H 3650 3700 50  0001 C CNN
-F 3 "" H 3650 3700 50  0001 C CNN
-	1    3650 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L RF_WiFi:LORA_433T30D LORA_1W1
-U 1 1 5ECB6750
-P 2700 3350
-F 0 "LORA_1W1" H 2505 3950 50  0000 L CNN
-F 1 "LORA_433T30D" H 2420 3845 50  0000 L CNN
-F 2 "RF_WiFi:LORA_E32_433T30D" H 2200 3750 50  0000 L CNN
-F 3 "" H 2686 3386 50  0001 C CNN
-	1    2700 3350
-	1    0    0    -1  
-$EndComp
 $Comp
 L RF_GPS:NEO_6M 6M1
 U 1 1 5ECB042A
@@ -190,35 +142,11 @@ F 3 "" H 1500 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Battery_Cell BT1
-U 1 1 5EEE89DD
-P 8000 2450
-F 0 "BT1" H 8118 2546 50  0000 L CNN
-F 1 "Battery_Cell" H 8118 2455 50  0000 L CNN
-F 2 "Battery:BatteryHolder_MPD_BH-18650-PC2" V 8000 2510 50  0001 C CNN
-F 3 "~" V 8000 2510 50  0001 C CNN
-	1    8000 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR05
-U 1 1 5EEEAF42
-P 8000 2550
-F 0 "#PWR05" H 8000 2300 50  0001 C CNN
-F 1 "GND" H 8005 2377 50  0000 C CNN
-F 2 "" H 8000 2550 50  0001 C CNN
-F 3 "" H 8000 2550 50  0001 C CNN
-	1    8000 2550
-	1    0    0    -1  
-$EndComp
-Text GLabel 8000 2250 1    50   Input ~ 0
-VIN
-$Comp
 L Device:R R6
 U 1 1 5EFC9734
 P 7640 3310
 F 0 "R6" H 7710 3356 50  0001 L CNN
-F 1 "5000k" V 7580 3190 50  0000 L BNN
+F 1 "36k" V 7580 3190 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7570 3310 50  0001 C CNN
 F 3 "~" H 7640 3310 50  0001 C CNN
 	1    7640 3310
@@ -229,7 +157,7 @@ L Device:R R5
 U 1 1 5EFC973E
 P 7640 3450
 F 0 "R5" H 7710 3496 50  0001 L CNN
-F 1 "500k" V 7750 3360 50  0000 L BNN
+F 1 "5k" V 7750 3360 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7570 3450 50  0001 C CNN
 F 3 "~" H 7640 3450 50  0001 C CNN
 	1    7640 3450
@@ -250,8 +178,6 @@ Text GLabel 7790 3310 2    50   Input ~ 0
 VIN
 NoConn ~ 2800 3650
 NoConn ~ 5990 3890
-NoConn ~ 5990 3790
-NoConn ~ 5990 3690
 NoConn ~ 5990 3590
 $Comp
 L Device:R R9
@@ -268,8 +194,8 @@ Text GLabel 5990 3490 0    50   Input ~ 0
 D9
 Text GLabel 5990 3190 0    50   Input ~ 0
 D6
-Text GLabel 5990 2890 0    50   Input ~ 0
-D3
+Text GLabel 5990 3790 0    50   Input ~ 0
+D12
 Wire Wire Line
 	7490 3310 7490 3380
 Text GLabel 6990 3390 2    50   Input ~ 0
@@ -281,8 +207,8 @@ Wire Wire Line
 Connection ~ 7490 3380
 Wire Wire Line
 	7490 3380 7490 3450
-Text GLabel 5990 2790 0    50   Input ~ 0
-D2
+Text GLabel 5990 3690 0    50   Input ~ 0
+D11
 $Comp
 L power:GND #PWR0104
 U 1 1 5EFDB6A0
@@ -373,9 +299,9 @@ Wire Wire Line
 Wire Wire Line
 	5020 2720 5050 2720
 Text GLabel 5050 2720 2    50   Input ~ 0
-D2
+D11
 Text GLabel 5450 2890 2    50   Input ~ 0
-D3
+D12
 Text GLabel 5450 3190 2    50   Input ~ 0
 D6
 Text GLabel 5040 3490 2    50   Input ~ 0
@@ -468,61 +394,108 @@ Text GLabel 5080 4150 1    50   Input ~ 0
 TX_LORA
 Text GLabel 5430 4150 1    50   Input ~ 0
 RX_GPS
-$Comp
-L Converter_DCDC:STEPUP XL6009E11
-U 1 1 5F1DCBFD
-P 3850 3300
-F 0 "XL6009E11" H 3635 4165 50  0000 L CNN
-F 1 "STEPUP" H 3705 4265 50  0000 L CNN
-F 2 "Converter_DCDC:STEPUP_XL6009E1" H 3500 4065 50  0000 L CNN
-F 3 "" H 3850 3300 50  0001 C CNN
-	1    3850 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 5ECAC6BC
-P 3700 2850
-F 0 "#PWR03" H 3700 2600 50  0001 C CNN
-F 1 "GND" H 3705 2677 50  0000 C CNN
-F 2 "" H 3700 2850 50  0001 C CNN
-F 3 "" H 3700 2850 50  0001 C CNN
-	1    3700 2850
-	-1   0    0    1   
-$EndComp
-Text GLabel 2900 3650 3    50   Input ~ 0
-VIN
-Text GLabel 1700 3550 3    50   Input ~ 0
-VIN
-Text GLabel 4050 3700 3    50   Input ~ 0
-7V_STEPUP
-Text GLabel 6390 2190 1    50   Input ~ 0
-7V_STEPUP
 NoConn ~ 6690 2190
 $Comp
-L Connector:TestPoint TP1
-U 1 1 5F1F32C6
-P 8500 4135
-F 0 "TP1" H 8558 4253 50  0000 L CNN
-F 1 "TestPoint" H 8558 4162 50  0000 L CNN
-F 2 "TestPoint:Furo_Jumper" H 8700 4135 50  0001 C CNN
-F 3 "~" H 8700 4135 50  0001 C CNN
-	1    8500 4135
+L Converter_DCDC:STEPDOWN XL40051
+U 1 1 5F35BF7D
+P 3795 3335
+F 0 "XL40051" H 4123 3451 50  0000 L CNN
+F 1 "STEPDOWN" H 4123 3360 50  0000 L CNN
+F 2 "Converter_DCDC:STEPDOWN_XL4005" H 4123 3269 50  0000 L CNN
+F 3 "" H 3795 3335 50  0001 C CNN
+	1    3795 3335
+	1    0    0    -1  
+$EndComp
+Text GLabel 3995 2885 1    50   Input ~ 0
+VIN
+$Comp
+L power:GND #PWR03
+U 1 1 5F35C859
+P 3645 2885
+F 0 "#PWR03" H 3645 2635 50  0001 C CNN
+F 1 "GND" H 3650 2712 50  0000 C CNN
+F 2 "" H 3645 2885 50  0001 C CNN
+F 3 "" H 3645 2885 50  0001 C CNN
+	1    3645 2885
+	-1   0    0    1   
+$EndComp
+Text GLabel 3995 3735 3    50   Input ~ 0
+3,3v
+Text GLabel 2900 3650 3    50   Input ~ 0
+3,3v
+Text GLabel 1700 3550 3    50   Input ~ 0
+3,3v
+Text GLabel 6390 2190 1    50   Input ~ 0
+VIN
+$Comp
+L power:GND #PWR01
+U 1 1 5F35E37B
+P 3595 3735
+F 0 "#PWR01" H 3595 3485 50  0001 C CNN
+F 1 "GND" H 3600 3562 50  0000 C CNN
+F 2 "" H 3595 3735 50  0001 C CNN
+F 3 "" H 3595 3735 50  0001 C CNN
+	1    3595 3735
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP2
-U 1 1 5F1F390C
-P 8975 4130
-F 0 "TP2" H 9033 4248 50  0000 L CNN
-F 1 "TestPoint" H 9033 4157 50  0000 L CNN
-F 2 "TestPoint:Furo_Jumper" H 9175 4130 50  0001 C CNN
-F 3 "~" H 9175 4130 50  0001 C CNN
-	1    8975 4130
+L Connector:Barrel_Jack_MountingPin J2
+U 1 1 5F43899E
+P 9750 4155
+F 0 "J2" H 9807 4472 50  0000 C CNN
+F 1 "Barrel_Jack_MountingPin" H 9807 4381 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 9800 4115 50  0001 C CNN
+F 3 "~" H 9800 4115 50  0001 C CNN
+	1    9750 4155
+	0    1    1    0   
+$EndComp
+Text GLabel 9850 4455 3    50   Input ~ 0
+VIN
+$Comp
+L power:GND #PWR0110
+U 1 1 5F43CE10
+P 9650 4455
+F 0 "#PWR0110" H 9650 4205 50  0001 C CNN
+F 1 "GND" V 9655 4327 50  0000 R CNN
+F 2 "" H 9650 4455 50  0001 C CNN
+F 3 "" H 9650 4455 50  0001 C CNN
+	1    9650 4455
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 9450 4155
+NoConn ~ 5990 2790
+NoConn ~ 5990 2890
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F4607CD
+P 8175 2340
+F 0 "H1" H 8275 2386 50  0000 L CNN
+F 1 "MountingHole" H 8275 2295 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5.5mm" H 8175 2340 50  0001 C CNN
+F 3 "~" H 8175 2340 50  0001 C CNN
+	1    8175 2340
 	1    0    0    -1  
 $EndComp
-Text GLabel 8500 4135 3    50   Input ~ 0
-VIN
-Text GLabel 8975 4130 3    50   Input ~ 0
-VIN
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F460A69
+P 8180 2580
+F 0 "H2" H 8280 2626 50  0000 L CNN
+F 1 "MountingHole" H 8280 2535 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5.5mm" H 8180 2580 50  0001 C CNN
+F 3 "~" H 8180 2580 50  0001 C CNN
+	1    8180 2580
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF_WiFi:LORA_433T20D LORA_100mW1
+U 1 1 5F94CE06
+P 2700 3350
+F 0 "LORA_100mW1" H 2430 4015 50  0000 L CNN
+F 1 "LORA_433T20D" H 2420 3905 50  0000 L CNN
+F 2 "RF_WiFi:LORA_E32_433T20D" H 2180 3795 50  0000 L CNN
+F 3 "" H 2686 3386 50  0001 C CNN
+	1    2700 3350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
