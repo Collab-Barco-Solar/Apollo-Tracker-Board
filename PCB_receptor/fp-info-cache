@@ -1,4 +1,4 @@
-18633215322054194
+18638086732116114
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -47495,7 +47495,14 @@ https://power.murata.com/data/power/oki-78sr.pdf
 3
 3
 Converter_DCDC
-STEPDOWN_CHINA
+STEPDOWN_XL4005
+Through hole straight socket strip, 1x01, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x01 2.54mm single row
+0
+4
+4
+Converter_DCDC
+STEPUP_XL6009E1
 Through hole straight socket strip, 1x01, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
 Through hole socket strip THT 1x01 2.54mm single row
 0
@@ -73542,6 +73549,13 @@ Shielding Cabinet
 48
 1
 RF_WiFi
+LORA_E32_433T20D
+Through hole straight socket strip, 1x07, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x07 2.54mm single row
+0
+10
+10
+RF_WiFi
 LORA_E32_433T30D
 Through hole straight socket strip, 1x07, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
 Through hole socket strip THT 1x07 2.54mm single row
@@ -80296,6 +80310,13 @@ THT Terminal Block WAGO 804-324 45Degree pitch 7.5mm size 179x15mm^2 drill 1.2mm
 0
 48
 24
+TestPoint
+Furo_Jumper
+Furo_Jumper
+CONN DEV
+0
+1
+1
 TestPoint
 TestPoint_2Pads_Pitch2.54mm_Drill0.8mm
 Test point with 2 pins, pitch 2.54mm, drill diameter 0.8mm
