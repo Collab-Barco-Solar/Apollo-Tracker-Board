@@ -1,0 +1,4 @@
+1 - Abra o kicad, vá em preferências
+2 - clique em locais dos arquivos
+3 - na janela que abrir, clique no botão +
+4 - adicione um nome e o caminho da pasta que contém as bibliotecas
